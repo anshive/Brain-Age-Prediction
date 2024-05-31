@@ -25,7 +25,7 @@ SECRET_KEY = '=mxbfxq2+m4&!nsna$^=v5x%jv+pdhkuj-y$qd88rvrigiis73'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['brain-age-prediction.onrender.com']
 
 
 # Application definition
