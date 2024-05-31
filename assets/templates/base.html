@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>CyberSercurity</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.min.css' %}">
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url("{% static 'img/bbg-1.jpeg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .para{
+            color: rgb(227, 231, 228);
+            text-align: left;
+        }
+    </style>
+    <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span>Brain age prediction</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-6"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse flex-grow-0 order-md-first" id="navcol-6">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'Home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'Userlogin' %}">USER</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'adminlogin' %}">ADMIN</a></li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    <br><br><br>
+    <div class="para">
+    <p>Machine learning (ML) algorithms play a vital role in the brain age estimation frameworks. The impact of regression algorithms on prediction accuracy in the brain
+        age estimation frameworks have not been comprehensively evaluated. Here, we  sought to assess the efficiency of  different regression algorithms on brain age estimation. To this end, we built a brain age estimation framework based on a large set of cognitively healthy (CH) individuals (N = 788) as a training set followed by different regression algorithms  (22 different algorithms in total). We then quantified each regression-algorithm on independent test sets composed of 88 CH individuals, 70 mild cognitive impairment patients as well as 30 Alzheimer’s disease patients. The prediction accuracy in the independent test set (i.e., CH set) varied in regression algorithms mean absolute error (MAE) from 4:63 to 7:14 yrs, R2 from 0:76 to 0:88. The highest and lowest prediction accuracies were achieved by Quadratic Support Vector Regression algorithm (MAE = 4:63 yrs, R2 = 0:88; 95% CI = [􀀀1:26; 1:42]) and Binary Decision Tree algorithm (MAE = 7:14 yrs, R2 = 0:76; 95% CI = [􀀀1:50; 2:62]), respectively. Our experimental results demonstrate that the prediction accuracy in brain age frameworks is affected by regression algorithms, indicating that advanced machine learning algorithms can lead to more accurate brain age
+        predictions in clinical settings.</p>
+    </div>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    {%block contents%}
+
+    {%endblock%}
+</body>
+
+</html>

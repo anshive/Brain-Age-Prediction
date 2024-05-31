@@ -1,0 +1,105 @@
+{% extends 'user/userbase.html' %}
+{% load static %}
+{% block contents %}
+
+<style>
+    .form-container {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .form-container label {
+        color: rgb(227, 231, 228);
+    }
+    .pred{
+        color: rgb(20, 223, 71);
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="email"],
+    .form-container input[type="password"] {
+        display: inline-block;
+        width: 200px; /* Adjust the width as desired */
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .form-container input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .form-container input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+     .grid-container {
+       display: grid;
+       grid-template-columns: repeat(4, 1fr);
+       grid-gap: 10px;
+     }
+ 
+     .grid-item {
+       display: flex;
+       flex-direction: column;
+     }
+   </style>
+<br><br>
+ <div class="form-container">
+    <form  action="/predicts/" method="POST">
+        {% csrf_token %}
+   <div class="grid-container">
+     <div class="grid-item">
+       <label for="input1">T1_chronAge</label>
+       <input type="text" id="input1" name="input1">
+     </div>
+     <div class="grid-item">
+       <label for="input2">T1_PAD</label>
+       <input type="text" id="input2" name="input2">
+     </div>
+     <div class="grid-item">
+       <label for="input3">Age_at_onset</label>
+       <input type="text" id="input3" name="input3">
+     </div>
+     <div class="grid-item">
+       <label for="input4">premorbidIQ</label>
+       <input type="text" id="input4" name="input4">
+     </div>
+     <div class="grid-item">
+       <label for="input5">PAD_GROUPS</label>
+       <input type="text" id="input5" name="input5">
+     </div>
+     <div class="grid-item">
+        <label for="input1">Education</label>
+        <input type="text" id="input1" name="input6">
+      </div>
+      <div class="grid-item">
+        <label for="input2">StrongProfile</label>
+        <input type="text" id="input2" name="input7">
+      </div>
+      <div class="grid-item">
+        <label for="input2">T1_ALSFRS</label>
+        <input type="text" id="input2" name="input8">
+      </div>
+      <div class="grid-item">
+        <label for="input2">disease_duration_after_TP1</label>
+        <input type="text" id="input2" name="input9">
+      </div>
+      <div class="grid-item">
+        <label for="input2">total_disease_duration</label>
+        <input type="text" id="input2" name="input10">
+      </div>
+      
+   </div>
+   <input type="submit" value="Submit">
+</form>
+ </div>
+ <div class="pred">
+<p>Prediction: The Age of the Brain is {{ prediction }} Years</p>
+</div>
+{% endblock %}

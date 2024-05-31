@@ -1,0 +1,26 @@
+{% extends 'admin/adminbase.html' %}
+{% load static %}
+{% block contents %}
+<style>
+    table {
+        margin-left: auto;
+        margin-right: auto;
+        border-collapse: collapse;
+        width: 50%;
+    }
+    h2{
+        color: rgb(230, 238, 232);
+    }
+    th, td, h2 {
+        border: 1px solid rgb(235, 223, 223);
+        padding: 8px;
+        text-align: center;
+    }
+</style>
+
+<div class="h2">
+<h2>mean_squared_error: {{mean_squared_error}}</h2>
+<h2>Mean_absolute_error: {{accuracy}}</h2>
+</div>
+
+{% endblock %}
